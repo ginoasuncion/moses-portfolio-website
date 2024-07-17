@@ -1,0 +1,364 @@
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/DMSans.ttf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Big John';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/BigJohn.otf') format('opentype');
+  font-display: swap;
+}
+
+.container {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #F3EED8;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.bannerContainer {
+  font-family: 'Big John', sans-serif;
+  background-color: #F3EED8;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.bannerSection {
+  height: 100vh;
+  background-color: #B252CC;
+  display: grid;
+  grid-template-columns: 0.95fr 1.5fr; /* Adjust to make text area wider */
+  align-items: center;
+  color: #FFFFFF;
+  position: relative;
+  scroll-snap-align: start;
+  padding: 0 60px; /* Add padding to bring text closer to left and image closer to right */
+}
+
+.bannerText {
+  grid-column: 1 / 2; /* Move text to the left column */
+  padding-left: 0; /* Remove left padding */
+}
+
+.bannerTitle {
+  font-family: 'Big John', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: #F3EED8;
+  margin: 0;
+  line-height: 1.12; /* Use 70/62 ratio for line-height */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.bannerTitle:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.bannerSubtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 34px;
+  color: #F3EED8;
+  margin-top: 20px;
+  line-height: auto; /* Use auto line-height */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+
+.projectDetails {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  color: #F3EED8;
+  margin: 10px 0;
+  line-height: 32px; /* Use 22/32 for project details */
+}
+
+.imageSection {
+  grid-column: 2 / 3; /* Move image to the right column */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+  align-items: center;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Ensure the image fits within the viewport */
+  object-fit: contain;
+  /* border-radius: 20px; */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  background-color: #F3EED8;
+  margin-bottom: 20px;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.text {
+  padding: 20px;
+  color: #000;
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.text:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.artTitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: left;
+}
+
+.description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  color: #000;
+}
+
+.increasedFontSize {
+  font-size: 64px;
+}
+
+.personaSection {
+  background-color: #F3EED8;
+  padding: 40px 120px;
+  scroll-snap-align: start;
+}
+
+.personasGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.persona {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.personaImageWrapper {
+  flex: 0 0 auto;
+  width: 38%; /* Adjust width to cover almost half of the page */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.personaImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.personaImage:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.personaText {
+  flex: 1;
+}
+
+.personaText h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  color: #000;
+  margin: 0;
+  transition: color 0.3s ease-in-out; /* Add transition for color change */
+}
+
+.personaText h3:hover {
+  color: #1D64F2; /* Change color on hover */
+}
+
+.personaText p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+}
+
+.artDirectionSection {
+  background-color: #F3EED8;
+  padding: 60px 10px;
+  scroll-snap-align: start;
+}
+
+.artDirectionContent {
+  text-align: left;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.imageArtWrapper {
+  display: flex;
+  justify-content: center;
+  padding-right: 200px;
+  padding-left: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.keyLearningsSection {
+  background-color: #F3EED8;
+  height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content */
+  scroll-snap-align: start;
+  text-align: left; /* Center text */
+}
+
+.keyLearningsContent {
+  max-width: 80%; /* Center the content */
+  font-size: 64px;
+  padding: 20px;
+  font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+}
+
+.keyLearningDescription {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  margin: 0;
+  color: #000;
+}
+
+.lonelyPlanetDescription {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  margin: 0;
+  color: #000;
+}
+
+.logoMenu {
+  position: absolute;
+  top: 20px;
+  right: 95px; /* Adjust right position as needed */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.logoMenuLeft {
+  position: absolute;
+  top: 20px;
+  left: 95px; /* Adjust left position as needed */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.logo {
+  width: 40px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Optional: Change cursor on hover */
+  background: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+}
+
+.footer {
+  width: 100%; /* Full viewport width */
+  background-color: #1D64F2;
+  color: #F3EED8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  margin-top: 20px; /* Add space above footer */
+}
+
+.footerLeft {
+  font-size: 14px;
+  margin-left: 100px;
+  font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+}
+
+.footerRight {
+  display: flex;
+  gap: 40px;
+  font-size: 14px;
+  margin-right: 100px; /* Added space on the right */
+  font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+}
+
+.footerRight a {
+  color: #F3EED8;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+  transition: color 0.3s ease-in-out; /* Add transition for color change */
+}
+
+.footerRight a:hover {
+  color: #B252CC; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  .bannerSection, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bannerTitle, .title {
+    font-size: 48px;
+  }
+
+  .bannerSubtitle, .description {
+    font-size: 18px;
+  }
+
+  .persona {
+    flex-direction: column;
+  }
+
+  .personaImageWrapper, .personaText {
+    width: 100%;
+  }
+
+  .artDirectionContent {
+    max-width: 100%;
+    padding-left: 0; /* Adjust padding for smaller screens */
+  }
+
+  .keyLearningsContent {
+    max-width: 100%;
+  }
+}

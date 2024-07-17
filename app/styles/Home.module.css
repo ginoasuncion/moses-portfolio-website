@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Big John';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/BigJohn.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/DMSans.ttf') format('opentype');
+  font-display: swap;
+}
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F3EED8;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 200; /* Ensure the navbar is above other content */
+  opacity: 0; /* Start with navbar hidden */
+  animation: revealNavbar 1s ease-in-out 1s forwards; /* 1s delay for reveal */
+}
+
+@keyframes revealNavbar {
+  to {
+    opacity: 1; /* Fade in */
+  }
+}
+
+.navLogo {
+  height: 80px; /* Adjust height as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.navLogo:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+.main {
+  flex: 1 0 auto;
+  overflow: hidden;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.projectsSection {
+  flex: 1 0 auto;
+  padding: 60px 20px;
+  background-color: #F3EED8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure content starts from the top */
+  align-items: center; /* Center content horizontally */
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.projectContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%; /* Ensure the project content takes the full height */
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 20px; /* Adjust top margin as needed */
+}
+
+.textSection {
+  max-width: 600px;
+  margin-bottom: 20px; /* Adjust as needed */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+/* .textSection:hover {
+  transform: scale(1.05); /* Scale up slightly on hover } */
+
+.projectTitle {
+  font-family: 'Big John', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 20px;
+  line-height: calc(70 / 62); /* Adjust line-height based on the given ratio */
+}
+
+.projectSubtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 34px;
+  color: #231F20;
+  margin: 0 0 40px;
+  line-height: auto; /* Let the browser calculate the appropriate line height */
+}
+
+.viewProjectButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #F3EED8;
+  background-color: #231F20;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for background color and scaling */
+}
+
+.viewProjectButton:hover {
+  background-color: #231F20; /* Change background color on hover */
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.imageSection {
+  width: 120%;
+  height: 160%; /* Full height of the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add some padding around the image */
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%; /* Ensure the image is taller */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.projectImage:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background-color: #231F20;
+  color: #F3EED8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.footerLeft {
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  padding-left: 120px;
+}
+
+.footerRight {
+  display: flex;
+  gap: 40px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  padding-right: 120px;
+}
+
+.footerRight a {
+  color: #F3EED8;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Add transition for color change */
+}
+
+.footerRight a:hover {
+  color: #1D64F2; /* Change color on hover */
+}
+
+.logoMenu {
+  position: absolute;
+  top: 20px;
+  right: 95px;
+  z-index: 100;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+@media (max-width: 768px) {
+  .projectContent {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .textSection {
+    text-align: center;
+  }
+
+  .viewProjectButton {
+    display: block;
+    margin: 20px auto; /* Center button on smaller screens */
+  }
+}
